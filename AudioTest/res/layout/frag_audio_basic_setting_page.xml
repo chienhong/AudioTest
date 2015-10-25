@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tvAudioBasicSetting"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:text="Audio Basic Setting:"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/llAudioBasicSampleRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAudioBasicSetting"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal" >
+
+    	<TextView
+        	android:id="@+id/tvBasicSampleRate"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="SampleRate:" />
+
+    	<Spinner
+        	android:id="@+id/spnSampleRate"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content" />
+    	
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llAudioBasicFrameSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llAudioBasicSampleRate"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal" >
+    	
+    	<TextView
+        	android:id="@+id/tvBasicFrameSize"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="AudioFrameSize (ms):" />
+
+    	<Spinner
+        	android:id="@+id/spnAudioFrameSize"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content" />
+    	
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llDynPlayRateRatio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llAudioBasicFrameSize"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal" >
+    	
+    	<TextView
+        	android:id="@+id/tvDynPlayRateRatio"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="Play rate speed up ratio:" />
+
+    	<EditText
+    	    android:id="@+id/etDynPlayRateRatio"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content"
+    	    android:inputType="number"
+    	    android:layout_marginLeft="5dp"
+    	    android:layout_marginStart="5dp"
+    	    android:maxLength="5"
+    	    android:text="20" >
+
+    	</EditText>
+    	
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llComposedFrameCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llDynPlayRateRatio"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal" >
+    	<TextView
+        	android:id="@+id/tvComposedFrameCount"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="Composed Audio Frames:" />
+
+    	<EditText
+    	    android:id="@+id/etComposedFrameCount"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content"
+    	    android:inputType="number"
+    	    android:layout_marginLeft="5dp"
+    	    android:layout_marginStart="5dp"
+    	    android:maxLength="2"
+    	    android:text="1" >
+
+    	</EditText>
+    	
+    </LinearLayout>
+    
+</RelativeLayout>

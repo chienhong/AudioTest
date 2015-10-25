@@ -1,0 +1,2064 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginStart="5dp"
+	    android:layout_marginRight="5dp"
+	    android:layout_marginEnd="5dp" >
+	
+	    <LinearLayout 
+	        android:id="@+id/llAudioTestMode"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentStart="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+	    	
+	    	<TextView
+	        	android:id="@+id/tvAudioTestMode"
+	        	android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:textSize="16sp"
+	        	android:textColor="@color/color_blue"
+	        	android:text="AudioTestMode" />
+	    	
+			<RadioGroup
+	            android:id="@+id/rgAudioTestMode"
+	    		android:layout_width="fill_parent"
+	    		android:layout_height="wrap_content"
+	    		android:orientation="horizontal">
+	    		
+	    		<RadioButton android:id="@+id/rbLocalLoop"
+	        		android:layout_width="wrap_content"
+	        		android:layout_height="wrap_content"
+	        		android:textSize="12sp"
+	        		android:text="LocalLoop" />
+	    		
+	    		<RadioButton android:id="@+id/rbLocalUDP"
+	        		android:layout_width="wrap_content"
+	        		android:layout_height="wrap_content"
+	        		android:textSize="12sp"
+	        		android:text="UDP"
+	        		android:checked="true" />
+	
+			</RadioGroup>
+			
+			<CheckBox 
+			    android:id="@+id/cbAudioTestMode"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="Audio Test Mode" />
+						
+			<LinearLayout 
+		        android:id="@+id/llAudioTest"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+				
+		    	<Button
+		        	android:id="@+id/btnAudioStart"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Audio Start" />
+		
+		    	<Button
+		        	android:id="@+id/btnAudioStop"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:layout_marginLeft="10dp"
+		        	android:text="Audio Stop" />
+		
+		    </LinearLayout>
+        
+			<LinearLayout 
+		        android:id="@+id/llAudioTestSetting"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		    	
+				<CheckBox
+		        	android:id="@+id/cbUDPListen"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="UDP Listen" />
+
+				<CheckBox
+		        	android:id="@+id/cbMP3Source"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="MP3 Music" />
+				
+				<CheckBox
+		        	android:id="@+id/cbMP3Voice"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="MP3 Voice" />
+				
+			</LinearLayout>
+			
+			<LinearLayout 
+		        android:id="@+id/llAudioTestSetting2"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+				
+			    <CheckBox 
+			        android:id="@+id/cbWaveFile"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Wave File" />
+			    
+			    <CheckBox 
+			        android:id="@+id/cbAutoRename"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Auto Rename" />
+			    
+			    <CheckBox 
+			        android:id="@+id/cbOpusRename"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Opus Rename" />
+			    
+			</LinearLayout>
+			    
+			<LinearLayout 
+		        android:id="@+id/llAudioTestSetting3"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+			
+			    <CheckBox 
+			        android:id="@+id/cbAudioEffectRename"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Audio Effect Rename" />
+			    
+			    <CheckBox 
+			        android:id="@+id/cbAGCRename"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="AGC Rename" />
+			    
+			</LinearLayout>
+			
+			<LinearLayout 
+		        android:id="@+id/llAudioTestSetting4"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+				
+			    <CheckBox 
+			        android:id="@+id/cbAECTest"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="AEC Test" />
+			    
+			    <CheckBox 
+			        android:id="@+id/cbAECRename"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="AEC Rename" />
+			    
+			</LinearLayout>
+			
+			<LinearLayout 
+		        android:id="@+id/llAudioTestSetting5"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+				
+			    <CheckBox 
+			        android:id="@+id/cbNSRename"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="NS Rename" />
+			    
+			    <CheckBox 
+			        android:id="@+id/cbPacketLostRename"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Packet Lost Rename" />
+			    
+			</LinearLayout>
+			
+			<LinearLayout 
+		        android:id="@+id/llAudioTestSetting6"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+			    
+			    <CheckBox 
+			        android:id="@+id/cbRecvDelayProfile"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Recv Delay Profile" />
+			    
+			    <CheckBox 
+			        android:id="@+id/cbRecvSeqNoProfile"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Recv SeqNo Profile" />
+			    
+			</LinearLayout>
+			
+			<LinearLayout 
+		        android:id="@+id/llAudioTestSetting7"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+				
+			    <CheckBox
+			        android:id="@+id/cbSaveRecvPacketTime"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Save RecvA Packet Time" />
+			    
+			    <CheckBox 
+			        android:id="@+id/cbSaveRecvSeqNo"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Save Recv SeqNo" />
+
+			</LinearLayout>
+			
+			<LinearLayout
+		        android:id="@+id/llMP3Source"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		
+		    	<TextView
+		        	android:id="@+id/tvMP3Source"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="MP3 Source:" />
+		
+		    	<Spinner
+		        	android:id="@+id/spnMP3Source"
+		        	android:layout_width="match_parent"
+		        	android:layout_height="wrap_content" />
+		    	
+		    </LinearLayout>
+		    
+			<LinearLayout
+		        android:id="@+id/llWaveSource"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		
+		    	<TextView
+		        	android:id="@+id/tvWaveSource"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Wave Source:" />
+		
+		    	<Spinner
+		        	android:id="@+id/spnWaveSource"
+		        	android:layout_width="match_parent"
+		        	android:layout_height="wrap_content" />
+		    	
+		    </LinearLayout>
+		    
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+            android:id="@+id/llPacketLostRename"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llAudioTestMode"
+            android:orientation="vertical" >
+            
+            <TextView 
+                android:id="@+id/tvPacketLostRename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_blue"
+                android:text="Packet Lost Rename" />
+            
+           	<LinearLayout 
+           	    android:id="@+id/llPacketLostNetworkType"
+           	    android:layout_width="match_parent"
+           	    android:layout_height="wrap_content"
+           	    android:orientation="horizontal" >
+           	    
+           	    <CheckBox
+           	        android:id="@+id/cbPacketLostTCP"
+           	        android:layout_height="wrap_content"
+           	        android:layout_width="wrap_content"
+           	        android:text="TCP" />
+           	    
+           	    <CheckBox
+           	        android:id="@+id/cbPacketLostUDPAck"
+           	        android:layout_height="wrap_content"
+           	        android:layout_width="wrap_content"
+           	        android:text="UDP ACK" />
+           	    
+           	    <CheckBox
+           	        android:id="@+id/cbPacketLostUDPNoAck"
+           	        android:layout_height="wrap_content"
+           	        android:layout_width="wrap_content"
+           	        android:text="UDP No ACK" />
+           	    
+           	</LinearLayout>
+            
+           	<LinearLayout 
+           	    android:id="@+id/llPacketLostNetwork1"
+           	    android:layout_width="match_parent"
+           	    android:layout_height="wrap_content"
+           	    android:orientation="horizontal" >
+           	    
+           	    <TextView
+           	        android:id="@+id/cbPacketLostRate"
+           	        android:layout_height="wrap_content"
+           	        android:layout_width="wrap_content"
+           	        android:text="Packet Lost Rate:" />
+           	    
+           	    <Spinner
+           	        android:id="@+id/spnPacketLostRate"
+           	        android:layout_width="match_parent"
+           	        android:layout_height="wrap_content" />
+           	    
+           	</LinearLayout>
+           	
+           	<LinearLayout 
+           	    android:id="@+id/llPacketLostNetwork2"
+           	    android:layout_width="match_parent"
+           	    android:layout_height="wrap_content"
+           	    android:orientation="horizontal" >
+           	    
+           	    <CheckBox
+           	        android:id="@+id/cbPacketLostRetransmit"
+           	        android:layout_height="wrap_content"
+           	        android:layout_width="wrap_content"
+           	        android:text="Duplicate:" />
+           	    
+           	    <Spinner
+           	        android:id="@+id/spnPacketLostRetransmit"
+           	        android:layout_width="match_parent"
+           	        android:layout_height="wrap_content" />
+           	    
+           	</LinearLayout>
+           	
+           	<LinearLayout 
+           	    android:id="@+id/llPacketLostNetwork3"
+           	    android:layout_width="match_parent"
+           	    android:layout_height="wrap_content"
+           	    android:orientation="horizontal" >
+           	    
+           	    <TextView
+           	        android:id="@+id/tvPacketLostRetransmitInterval"
+           	        android:layout_height="wrap_content"
+           	        android:layout_width="wrap_content"
+           	        android:text="Retransmit Interval Time (ms):" />
+           	    
+           	    <Spinner
+           	        android:id="@+id/spnPacketLostRetransmitInterval"
+           	        android:layout_width="match_parent"
+           	        android:layout_height="wrap_content" />
+           	    
+           	</LinearLayout>
+           	
+        </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:id="@+id/llAudioCommonSetting"
+	        android:layout_below="@+id/llPacketLostRename"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+	        
+	        <TextView
+	        	android:id="@+id/tvAudioCommonSetting"
+	        	android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:textSize="16sp"
+	        	android:textColor="@color/color_blue"
+	        	android:text="Audio Common Setting" />
+	        
+	    
+	        <LinearLayout
+		        android:id="@+id/llAudioBasicSampleRate"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		
+		    	<TextView
+		        	android:id="@+id/tvBasicSampleRate"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="SampleRate:" />
+		
+		    	<Spinner
+		        	android:id="@+id/spnSampleRate"
+		        	android:layout_width="match_parent"
+		        	android:layout_height="wrap_content" />
+		    	
+		    </LinearLayout>
+		
+		    <LinearLayout
+		        android:id="@+id/llAudioBasicFrameSize"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		    	
+		    	<TextView
+		        	android:id="@+id/tvBasicFrameSize"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="AudioFrameSize (ms):" />
+		
+		    	<Spinner
+		        	android:id="@+id/spnAudioFrameSize"
+		        	android:layout_width="match_parent"
+		        	android:layout_height="wrap_content" />
+		    	
+		    </LinearLayout>
+		
+		    <LinearLayout
+		        android:id="@+id/llDynPlayRateRatio"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		    	
+		    	<TextView
+		        	android:id="@+id/tvDynPlayRateRatio"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Play rate speed up (%)" />
+		
+				<Spinner 
+				    android:id="@+id/spnDynSpeedUp"
+		        	android:layout_width="match_parent"
+		        	android:layout_height="wrap_content" />
+				    
+		    </LinearLayout>
+		
+		    <LinearLayout
+		        android:id="@+id/llComposedFrameCount"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		    	<TextView
+		        	android:id="@+id/tvComposedFrameCount"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Composed Audio Frames:" />
+		
+		    	<EditText
+		    	    android:id="@+id/etComposedFrameCount"
+		    	    android:layout_width="match_parent"
+		    	    android:layout_height="wrap_content"
+		    	    android:inputType="number"
+		    	    android:layout_marginLeft="5dp"
+		    	    android:layout_marginStart="5dp"
+		    	    android:maxLength="2"
+		    	    android:text="1" >
+		
+		    	</EditText>
+		    	
+		    </LinearLayout>
+	        
+	    </LinearLayout>
+	    
+	    <LinearLayout
+            android:id="@+id/llAudioControl"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/llAudioCommonSetting"
+        	android:orientation="vertical" >
+            
+            <TextView
+	        	android:id="@+id/tvAudioControl"
+	        	android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:textSize="16sp"
+	        	android:textColor="@color/color_blue"
+	        	android:text="Audio Control" />
+            
+            <LinearLayout 
+                android:id="@+id/llAudioControl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp" >
+                
+                <CheckBox
+	        		android:id="@+id/cbEnableAEC"
+	        		android:layout_width="wrap_content"
+	        		android:layout_height="wrap_content"
+	        		android:text="Enable AEC" />
+
+	    		<CheckBox
+	        		android:id="@+id/cbEnableDrop"
+	        		android:layout_width="wrap_content"
+	        		android:layout_height="wrap_content"
+			        android:text="Enable Drop" />
+    		
+            </LinearLayout>
+            
+			<LinearLayout 
+                android:id="@+id/llAudioControl2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp" >
+	    		
+			    <CheckBox
+			        android:id="@+id/cbDynPlayRate"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Dynamic Rate" />
+	    
+			    <CheckBox
+			        android:id="@+id/cbSaveAudioWave"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Save Audio" />
+			    
+		    </LinearLayout>
+		    
+			<LinearLayout 
+			    android:id="@+id/AudioControl3"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="5dp" >
+			    
+			    <CheckBox 
+			        android:id="@+id/cbEnableQueueVoice"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Queue Voice Data" >
+			        
+			    </CheckBox>
+			    
+			    <TextView 
+			        android:id="@+id/tvVoiceQueueMinSize"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="3dp"
+			        android:layout_marginStart="3dp"
+			        android:text="Number:" >
+			    </TextView>
+			    
+			    <EditText 
+			        android:id="@+id/etVoiceQueueSize"
+			        android:layout_width="55dp"
+			        android:layout_height="wrap_content"
+			        android:inputType="number"
+			        android:text="5" />
+			    
+			</LinearLayout>
+			
+			<LinearLayout 
+			    android:id="@+id/AudioControl4"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="5dp" >
+			    
+			    <CheckBox 
+			        android:id="@+id/cbDropNonVoiceData"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Drop Non-Voice Data" >
+			        
+			    </CheckBox>
+
+			    <CheckBox 
+			        android:id="@+id/cbRecorderFadeIn"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Recorder FadeIn" >
+			        
+			    </CheckBox>
+			    
+			</LinearLayout>
+			
+			<LinearLayout 
+			    android:id="@+id/AudioControl5"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="5dp" >
+			    
+			    <CheckBox 
+			        android:id="@+id/cbAudioTrackPlayDelay"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="AudioTrack Delay" >
+			        
+			    </CheckBox>
+			    
+			    <TextView
+		        	android:id="@+id/tvAudioTrackDelayTime"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Time (ms):"
+		        	android:layout_marginLeft="3dp"
+		        	android:layout_marginStart="3dp" />
+			    
+			    <EditText
+			        android:id="@+id/etAudioTrackDelayTime"
+			        android:layout_width="75dp"
+			        android:layout_height="wrap_content"
+			        android:inputType="number"
+			        android:text="0" />
+			    
+			</LinearLayout>
+			
+			<LinearLayout 
+			    android:id="@+id/llAudioControl6"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="5dp" >
+			    
+			    <CheckBox
+			        android:id="@+id/cbSaveVBRDataSize"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Save Encoded Data Size" />
+			    
+			    <Button
+			        android:id="@+id/btnStrongRate"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="3dp"
+			        android:layout_marginStart="3dp"
+		    	    android:text="強波" />
+			    
+			</LinearLayout>
+		    
+			<LinearLayout 
+			    android:id="@+id/llAudioControl7"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="5dp" >
+			    
+			    <CheckBox
+			        android:id="@+id/cbEnableNS"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Enable NS" />
+			    
+			    <CheckBox
+			        android:id="@+id/cbEnableEqualizer"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Enable Equalizer" />
+
+			</LinearLayout>
+			
+			<LinearLayout 
+			    android:id="@+id/llAudioControl8"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="5dp" >
+			    
+			    <CheckBox
+			        android:id="@+id/cbCalculateDB"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Calculate DB" />
+			    
+			    <CheckBox
+			        android:id="@+id/cbSaveDB"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Save DB" />
+
+			</LinearLayout>
+			
+			<LinearLayout 
+			    android:id="@+id/llAudioControl9"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="5dp" >
+			    
+			    <CheckBox
+			        android:id="@+id/cbEnableVAD"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Enable VAD" />
+
+			    <CheckBox
+			        android:id="@+id/cbSendIfVAD"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Send If VAD" />
+
+			</LinearLayout>
+			
+			<LinearLayout 
+			    android:id="@+id/llAudioControl10"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="5dp" >
+			
+			    <CheckBox
+			        android:id="@+id/cbDuplicateAudioData"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Duplicate Audio Data" />
+			    
+			    <CheckBox 
+			        android:id="@+id/cbGenPairData"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Gen Pair Data" />
+			    
+			</LinearLayout>
+			
+			<LinearLayout 
+			    android:id="@+id/llAudioControl11"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="5dp" >
+			
+			    <CheckBox
+			        android:id="@+id/cbDisorderPlay"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Disorder Play" />
+
+			</LinearLayout>
+			
+			<LinearLayout 
+			    android:id="@+id/llAudioControl12"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:layout_marginTop="5dp" >
+			    
+			    <CheckBox
+			        android:id="@+id/cbEnableAGC"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Enable AGC" />
+			    	
+		    	<LinearLayout 
+		    		android:id="@+id/llDBMinThreshold"
+		    		android:layout_width="match_parent"
+		    		android:layout_height="wrap_content"
+		    		android:orientation="horizontal"
+		    		android:layout_marginLeft="10dp"
+		    		android:layout_marginStart="10dp" >
+		    
+		    		<TextView 
+		        		android:id="@+id/tvDBMinThreshold"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:text="AGC: DB Min Threshold:" >
+		         
+				    </TextView>
+		    
+				    <EditText 
+		    		    android:id="@+id/etDBMinThreshold"
+		    		    android:layout_height="wrap_content"
+		    		    android:layout_width="match_parent"
+		    		    android:text="-30" >
+		        
+		    		</EditText>
+			    		
+			    </LinearLayout>
+			    
+		    	<LinearLayout 
+		    		android:id="@+id/llDBMaxThreshold"
+		    		android:layout_width="match_parent"
+		    		android:layout_height="wrap_content"
+		    		android:orientation="horizontal"
+		    		android:layout_marginLeft="10dp"
+		    		android:layout_marginStart="10dp" >
+		    
+		    		<TextView 
+		        		android:id="@+id/tvDBMaxThreshold"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:text="AGC: DB Max Threshold:" >
+		         
+				    </TextView>
+		    
+				    <EditText 
+		    		    android:id="@+id/etDBMaxThreshold"
+		    		    android:layout_height="wrap_content"
+		    		    android:layout_width="match_parent"
+		    		    android:text="-6" >
+		        
+		    		</EditText>
+			    		
+			    </LinearLayout>
+			    
+		    	<LinearLayout 
+		    		android:id="@+id/llAGCMaxCompressiondB"
+		    		android:layout_width="match_parent"
+		    		android:layout_height="wrap_content"
+		    		android:orientation="horizontal"
+		    		android:layout_marginLeft="10dp"
+		    		android:layout_marginStart="10dp" >
+		    
+		    		<TextView 
+		        		android:id="@+id/tvAGCMaxCompressiondB"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:text="AGC Max CompressiondB:" >
+		         
+				    </TextView>
+		    
+				    <EditText 
+		    		    android:id="@+id/etAGCMaxCompressiondB"
+		    		    android:layout_height="wrap_content"
+		    		    android:layout_width="match_parent"
+		    		    android:text="9" >
+		        
+		    		</EditText>
+			    		
+			    </LinearLayout>
+		    	
+			</LinearLayout>
+			
+			<LinearLayout 
+			    android:id="@+id/llAudioControl13"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="5dp" >
+		    	
+			    <CheckBox
+			        android:id="@+id/cbAdjustGain"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="AdjustGain" />
+			    
+			    <Button 
+			        android:id="@+id/btnAdjustGain"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Adjust Gain" />
+			    
+			</LinearLayout>
+			
+			<TextView 
+			    android:id="@+id/tvNoVoice"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="5dp"
+			    android:text="Audio control when no voice:" >
+			    
+			</TextView>
+			
+			<LinearLayout 
+			    android:id="@+id/llAudioControlNoVoice"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal" >
+			    
+			    <CheckBox
+			        android:id="@+id/cbWriteSilentData"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Write Silent Data" />
+
+			    <CheckBox 
+			        android:id="@+id/cbPauseAudioTrack"
+			        android:layout_width="wrap_content" 
+			        android:layout_height="wrap_content"
+			        android:text="Pause player" />
+			        
+			</LinearLayout>
+			
+			<LinearLayout 
+			    android:id="@+id/llAudioControlNoVoice2"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal" >
+			    
+			    <CheckBox 
+			        android:id="@+id/cbOpusSilentData"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Opus Silent Data" />
+			    
+			    <CheckBox 
+			        android:id="@+id/cbDuplicateData"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Duplicate Data" />
+
+			</LinearLayout>
+			
+			<LinearLayout 
+			    android:id="@+id/llAudioControlNoVoice3"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal" >
+			    
+			    <CheckBox 
+			        android:id="@+id/cbEnableGenData"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Enable Gen Data" />
+			    
+			</LinearLayout>
+			
+			<LinearLayout 
+			    android:id="@+id/llAudioControlNoVoice4"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal" >
+
+			    <CheckBox 
+			        android:id="@+id/cbGenerateSin"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Generate Sin" />
+			    
+			    <TextView 
+			        android:id="@+id/tvSinTone"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="5dp"
+			        android:layout_marginStart="5dp"
+			        android:text="Sin Tone (hertz):" >
+			        
+			    </TextView>
+			    
+			    
+			    <Spinner 
+			        android:id="@+id/spnSinTone"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content" >
+			        
+			    </Spinner>
+			    
+			</LinearLayout>
+			
+			<LinearLayout 
+			    android:id="@+id/llAudioControlNoVoice5"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal" >
+
+			    <CheckBox 
+			        android:id="@+id/cbGenFadeInOut"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Generate Fade In/Out" />
+			    
+			    <Spinner 
+			        android:id="@+id/spnFadeTime"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content" >
+			        
+			    </Spinner>
+			    
+			</LinearLayout>
+
+			<LinearLayout 
+			    android:id="@+id/llAudioControlNoVoice6"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal" >
+
+			    <CheckBox 
+			        android:id="@+id/cbCountAmplitudeDiff"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Count Amplitude Diff" />
+			    
+			</LinearLayout>
+									
+		    <LinearLayout
+		        android:id="@+id/llAudioDropRate"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:layout_marginTop="5dp" >
+                
+                <TextView
+			        android:id="@+id/tvAudioDropRate"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Audio Drop/Duplicate Rate:" />
+			
+			    <EditText
+			        android:id="@+id/etAudioDropRate"
+			        android:layout_width="55dp"
+			        android:layout_height="wrap_content"
+			        android:ems="10"
+			        android:inputType="number"
+			        android:text="3" >
+			        
+			    </EditText>
+		    
+		    </LinearLayout>
+		    
+        </LinearLayout>
+    
+        <LinearLayout 
+            android:id="@+id/llNetworkControl"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/llAudioControl"
+        	android:orientation="vertical">
+		
+            <LinearLayout
+                android:id="@+id/llNetworkSendDelayRateControl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                
+                <TextView
+			        android:id="@+id/tvUDPSendDelayRate"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/audio_control_send_delayrate" />
+			
+			    <EditText
+			        android:id="@+id/etUDPSenDelayRate"
+			        android:layout_width="55dp"
+			        android:layout_height="wrap_content"
+			        android:ems="10"
+			        android:inputType="number"
+			        android:text="0" >
+			
+			    </EditText>
+		    
+            </LinearLayout>
+		    
+			<LinearLayout
+                android:id="@+id/llNetworkSendDelayTimeControl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+			    
+			    <TextView
+			        android:id="@+id/tvUDPSendDelayTime"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="3dp"
+			        android:layout_marginStart="3dp"
+			        android:text="@string/audio_control_send_delaytime" />
+			
+			    <EditText
+			        android:id="@+id/etUDPSendDelayTime"
+			        android:layout_width="75dp"
+			        android:layout_height="wrap_content"
+			        android:ems="10"
+			        android:inputType="number"
+			        android:layout_marginLeft="3dp"
+			        android:layout_marginStart="3dp"
+			        android:text="0" >
+			
+			    </EditText>
+			    
+			</LinearLayout>
+			
+			<LinearLayout 
+			    android:id="@+id/llAudioSendDelayTimeAdjust"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal" >
+			    
+			    <TextView
+			        android:id="@+id/tvSendDelayTimeBiasAdjust"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="3dp"
+			        android:layout_marginStart="3dp"
+			        android:text="Send Delay Time Bias Adjust (ms):" />
+			
+			    <EditText
+			        android:id="@+id/etSendDelayTimeBiasAdjust"
+			        android:layout_width="75dp"
+			        android:layout_height="wrap_content"
+			        android:ems="10"
+			        android:inputType="number"
+			        android:layout_marginLeft="3dp"
+			        android:layout_marginStart="3dp"
+			        android:text="0" >
+			
+			    </EditText>
+			    
+			</LinearLayout>
+			
+			<LinearLayout
+                android:id="@+id/llNetworkRecvDelayRateControl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                
+                <TextView
+			        android:id="@+id/tvUDPRecvDelayRate"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/audio_control_recv_delayrate" />
+			
+			    <EditText
+			        android:id="@+id/etUDPRecvDelayRate"
+			        android:layout_width="55dp"
+			        android:layout_height="wrap_content"
+			        android:ems="10"
+			        android:inputType="number"
+			        android:text="0" >
+			
+			    </EditText>
+		    
+            </LinearLayout>
+		    
+			<LinearLayout
+                android:id="@+id/llNetworkRecvDelayTimeControl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+			    
+			    <TextView
+			        android:id="@+id/tvUDPRecvDelayTime"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="3dp"
+			        android:layout_marginStart="3dp"
+			        android:text="@string/audio_control_recv_delaytime" />
+			
+			    <EditText
+			        android:id="@+id/etUDPRecvDelayTime"
+			        android:layout_width="75dp"
+			        android:layout_height="wrap_content"
+			        android:ems="10"
+			        android:inputType="number"
+			        android:layout_marginLeft="3dp"
+			        android:layout_marginStart="3dp"
+			        android:text="0" >
+			
+			    </EditText>
+			    
+			</LinearLayout>
+			
+			<LinearLayout
+                android:id="@+id/llAudioRecvDelayTimeAdjust"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+			    
+			    <TextView
+			        android:id="@+id/tvRecvDelayTimeBiasAdjust"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginLeft="3dp"
+			        android:layout_marginStart="3dp"
+			        android:text="Recv Delay Time Bias Adjust (ms):" />
+			
+			    <EditText
+			        android:id="@+id/etRecvDelayTimeBiasAdjust"
+			        android:layout_width="75dp"
+			        android:layout_height="wrap_content"
+			        android:ems="10"
+			        android:inputType="number"
+			        android:layout_marginLeft="3dp"
+			        android:layout_marginStart="3dp"
+			        android:text="0" >
+			
+			    </EditText>
+			    
+			</LinearLayout>
+			
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/llAudioDelayCtlSleepTime" 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/llNetworkControl"
+	        android:orientation="horizontal"  >
+			
+            <TextView
+		        android:id="@+id/tvAudioDelayCtlSleepTime"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="3dp"
+		        android:layout_marginStart="3dp"
+		        android:text="Interrupt Delay Time (ms):" />
+		
+		    <EditText
+		        android:id="@+id/etAudioDelayCtlSleepTime"
+		        android:layout_width="70dp"
+		        android:layout_height="wrap_content"
+		        android:ems="10"
+		        android:inputType="number"
+		        android:layout_marginLeft="3dp"
+		        android:layout_marginStart="3dp"
+		        android:text="2000" >
+		
+		    </EditText>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/llAudioInterruptCtl" 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/llAudioDelayCtlSleepTime"
+	        android:orientation="horizontal"  >
+			
+            <Button
+                android:id="@+id/btnSendInterrupt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send Interrupt" />
+            
+            <Button
+                android:id="@+id/btnRecvInterrupt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:text="Recv Interrupt" />
+                        
+        </LinearLayout>
+        
+        <LinearLayout
+	        android:id="@+id/llRecvAudioQueueSize" 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/llAudioInterruptCtl"
+	        android:orientation="horizontal" >
+	
+	        <TextView
+	        	android:id="@+id/tvRecvAudioQueueSize"
+	        	android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="Recv Audio Queue Size:" />
+	        
+	        <TextView
+	        	android:id="@+id/tvRecvQueueValue"
+	        	android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="0" />
+	                
+	    </LinearLayout>
+	    
+        <LinearLayout
+	        android:id="@+id/llEstimateDelayTime" 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/llRecvAudioQueueSize"
+	        android:orientation="horizontal" >
+	
+	        <TextView
+	        	android:id="@+id/tvEstimateDelayTime"
+	        	android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="Estimate Delay Time(ms):" />
+	        
+	        <TextView
+	        	android:id="@+id/tvEstimateDelayTimeValue"
+	        	android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="0" />
+	            
+	    </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/llAudioControlSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llEstimateDelayTime"
+            android:orientation="vertical" >
+            
+            <TextView
+		        android:id="@+id/tvAudioControlSettings"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="Audio Control Settings"
+		        android:textSize="16sp"
+	        	android:textColor="@color/color_blue" />
+            
+            <LinearLayout 
+                android:id="@+id/llAECConfig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+			    
+                <TextView
+		        	android:id="@+id/tvAECConfig"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="AEC Config"
+		        	android:textColor="@color/color_blue" />
+
+                <LinearLayout 
+                    android:id="@+id/llAECDelayTimeBias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+				    
+                    <TextView 
+                        android:id="@+id/tvAECDelayTimeBias"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AEC Delay Time Bias:" />
+                        
+                    <Spinner
+                        android:id="@+id/spnAECDelayTimeBias"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                    </Spinner>
+                    
+                </LinearLayout>
+                
+                <LinearLayout 
+                    android:id="@+id/llAECProcessSampleCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+				    
+                    <TextView 
+                        android:id="@+id/tvAECProcessSampleCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AEC Process Sample Count:" />
+
+                    <Spinner
+                        android:id="@+id/spnAECProcessSampleCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                    </Spinner>
+
+                </LinearLayout>
+			</LinearLayout>
+            
+            <LinearLayout 
+                android:id="@+id/llAGCConfig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                
+                <TextView
+		        	android:id="@+id/tvAGCMode"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="AGC Mode"
+		        	android:textColor="@color/color_blue" />
+                
+                <RadioGroup
+                    android:id="@+id/rgAGCMode"
+		    		android:layout_width="fill_parent"
+		    		android:layout_height="wrap_content"
+		    		android:orientation="horizontal" >
+
+                    <RadioButton android:id="@+id/rbAGCModeUnchanged"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="12sp"
+		        		android:text="Unchanged" />
+		    		
+		    		<RadioButton android:id="@+id/rbAGCModeAdaptiveAnalog"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="12sp"
+		        		android:checked="true"
+		        		android:text="AdptAnalog" />
+		    		
+		    		<RadioButton android:id="@+id/rbAGCModeAdaptiveDigital"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="12sp"
+		        		android:text="AdptDigital" />
+                    
+		    		<RadioButton android:id="@+id/rbAGCModeFixedDigital"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="12sp"
+		        		android:text="FixedDigital" />
+		    		
+                </RadioGroup>
+                
+                <LinearLayout 
+                    android:id="@+id/llAGCTargetLvDbfs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+                    
+                    <TextView
+		        		android:id="@+id/tvAGCTargetLvDbfs"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:text="Target Level Dbfs:" />
+                    
+                    <EditText 
+                        android:id="@+id/etAGCTargetLvDbfs"
+		        		android:layout_width="match_parent"
+		        		android:layout_height="wrap_content"
+		        		android:inputType="number"
+		        		android:ems="10"
+		        		android:maxLength="2"
+		        		android:text="3" />
+                    
+                </LinearLayout>
+
+                <LinearLayout 
+                    android:id="@+id/llAGCCompressionGaindB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+                    
+                    <TextView
+		        		android:id="@+id/tvAGCCompressionGaindB"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:text="Compression Gain dB:" />
+                    
+                    <EditText 
+                        android:id="@+id/etAGCCompressionGaindB"
+		        		android:layout_width="match_parent"
+		        		android:layout_height="wrap_content"
+		        		android:inputType="number"
+		        		android:ems="10"
+		        		android:maxLength="2"
+		        		android:text="9" />
+                    
+                </LinearLayout>
+                
+                <LinearLayout 
+                    android:id="@+id/llAGCEchoValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+                    
+                    <CheckBox
+                        android:id="@+id/cbAGCAddFarEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Far-end" />
+                    
+                    <CheckBox 
+                        android:id="@+id/cbAGCHasEcho"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Has Echo" />
+                    
+                </LinearLayout>
+                
+                <LinearLayout 
+                    android:id="@+id/llAGCProcSampleTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+                    
+                    <TextView
+                        android:id="@+id/tvAGCProcSampleTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AGC Proc Sample Time MS:" />
+                    
+                    <Spinner 
+                        android:id="@+id/spnAGCProcSampleTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    
+                </LinearLayout>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:id="@+id/llNSConfig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                
+                <TextView
+		        	android:id="@+id/tvNSMode"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="NS Mode:"
+		        	android:textColor="@color/color_blue" />
+                
+                <RadioGroup
+                    android:id="@+id/rgNSMode"
+		    		android:layout_width="fill_parent"
+		    		android:layout_height="wrap_content"
+		    		android:orientation="horizontal" >
+
+                    <RadioButton android:id="@+id/rbNSModeMild"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="12sp"
+		        		android:text="Mild" />
+		    		
+		    		<RadioButton android:id="@+id/rbNSModeMedium"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="12sp"
+		        		android:checked="true"
+		        		android:text="Medium" />
+		    		
+		    		<RadioButton android:id="@+id/rbNSModeAggressive"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="12sp"
+		        		android:text="Aggressive" />
+                    
+                </RadioGroup>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:id="@+id/llNSConfig2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                
+                <TextView
+		        	android:id="@+id/tvNSSampleType"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Noise Sample:" />
+                
+                <RadioGroup
+                    android:id="@+id/rgNSSampleType"
+		    		android:layout_width="fill_parent"
+		    		android:layout_height="wrap_content"
+		    		android:orientation="horizontal" >
+
+                    <RadioButton android:id="@+id/rbNSSampleWhite"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="12sp"
+		        		android:text="White"
+		        		android:checked="true" />
+		    		
+		    		<RadioButton android:id="@+id/rbNSSamplePink"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="12sp"
+		        		android:text="Pink" />
+		    		
+		    		<RadioButton android:id="@+id/rbNSSampleBrownian"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="12sp"
+		        		android:text="Brownian" />
+                    
+                </RadioGroup>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:id="@+id/llEqualizerConfig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                
+                <TextView
+		        	android:id="@+id/tvEqualizerConfig"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Equalizer Config:" 
+		        	android:textColor="@color/color_blue" />
+                
+                <LinearLayout 
+                    android:id="@+id/llEquBand0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    
+	                <TextView
+			        	android:id="@+id/tvEquBand0"
+			        	android:layout_width="wrap_content"
+			        	android:layout_height="wrap_content"
+			        	android:text="Band 0" />
+
+	                <SeekBar
+				        android:id="@+id/sbEquBand0"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="10dp"
+				        android:layout_marginRight="5dp" />
+	                    
+                </LinearLayout>
+                    
+                <LinearLayout 
+                    android:id="@+id/llEquBand1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    
+	                <TextView
+			        	android:id="@+id/tvEquBand1"
+			        	android:layout_width="wrap_content"
+			        	android:layout_height="wrap_content"
+			        	android:text="Band 1" />
+
+	                <SeekBar
+				        android:id="@+id/sbEquBand1"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="10dp"
+				        android:layout_marginRight="5dp" />
+	                
+                </LinearLayout>
+                
+                <LinearLayout 
+                    android:id="@+id/llEquBand2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    
+	                <TextView
+			        	android:id="@+id/tvEquBand2"
+			        	android:layout_width="wrap_content"
+			        	android:layout_height="wrap_content"
+			        	android:text="Band 2" />
+
+	                <SeekBar
+				        android:id="@+id/sbEquBand2"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="10dp"
+				        android:layout_marginRight="5dp" />
+	                
+                </LinearLayout>
+                
+                <LinearLayout 
+                    android:id="@+id/llEquBand3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    
+	                <TextView
+			        	android:id="@+id/tvEquBand3"
+			        	android:layout_width="wrap_content"
+			        	android:layout_height="wrap_content"
+			        	android:text="Band 3" />
+
+	                <SeekBar
+				        android:id="@+id/sbEquBand3"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="10dp"
+				        android:layout_marginRight="5dp" />
+	                
+                </LinearLayout>
+                
+                <LinearLayout 
+                    android:id="@+id/llEquBand4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    
+	                <TextView
+			        	android:id="@+id/tvEquBand4"
+			        	android:layout_width="wrap_content"
+			        	android:layout_height="wrap_content"
+			        	android:text="Band 4" />
+
+	                <SeekBar
+				        android:id="@+id/sbEquBand4"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="10dp"
+				        android:layout_marginRight="5dp" />
+	                
+                </LinearLayout>
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/llOpusSetting"
+            android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/llAudioControlSettings"
+	        android:orientation="vertical" >
+            
+            <TextView
+		        android:id="@+id/tvOpusSettings"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="Opus Settings"
+		        android:textSize="16sp"
+	        	android:textColor="@color/color_blue" />
+		
+		    <LinearLayout
+		        android:id="@+id/llOpusApplication"
+		        android:layout_width="match_parent"
+		       	android:layout_height="wrap_content"
+		       	android:orientation="vertical">
+		        
+		        <TextView
+		        	android:id="@+id/tvOpusApplication"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Application" />
+		        
+		        <RadioGroup
+		            android:id="@+id/rgOpusApplication"
+		    		android:layout_width="fill_parent"
+		    		android:layout_height="wrap_content"
+		    		android:orientation="horizontal">
+		
+		    		<RadioButton android:id="@+id/rbAppVoIP"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="12sp"
+		        		android:text="VoIP" />
+		    		
+		    		<RadioButton android:id="@+id/rbAppAudio"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="12sp"
+		        		android:checked="true"
+		        		android:text="Audio" />
+		    		
+		    		<RadioButton android:id="@+id/rbAppRistrictLowDelay"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="12sp"
+		        		android:text="RestrictLowDelay" />
+		    		
+				</RadioGroup>
+		
+		    </LinearLayout>
+		
+		    <LinearLayout
+		        android:id="@+id/llOpusSignal"
+		        android:layout_width="match_parent"
+		       	android:layout_height="wrap_content"
+		       	android:orientation="vertical">
+		        
+		        <TextView
+		        	android:id="@+id/tvOpusSignal"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Signal" />
+		        
+		        <RadioGroup
+		            android:id="@+id/rgOpusSignal"
+		    		android:layout_width="fill_parent"
+		    		android:layout_height="wrap_content"
+		    		android:orientation="horizontal">
+		    		
+		    		<RadioButton android:id="@+id/rbSignalAuto"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="12sp"
+		        		android:text="Auto" />
+		    		
+		    		<RadioButton android:id="@+id/rbSignalVoice"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="12sp"
+		        		android:text="Voice"
+		        		android:checked="true" />
+		    		
+		    		<RadioButton android:id="@+id/rbSignalMusic"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="12sp"
+		        		android:text="Music" />
+		
+				</RadioGroup>
+		
+		    </LinearLayout>
+		    
+		    <LinearLayout
+		        android:id="@+id/llOpusBandWidth"
+		        android:layout_width="match_parent"
+		       	android:layout_height="wrap_content"
+		       	android:orientation="vertical">
+		        
+		        <TextView
+		        	android:id="@+id/tvOpusBandWidth"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Bandwidth" />
+		        
+		        <RadioGroup
+		            android:id="@+id/rgOpusBandWidth"
+		    		android:layout_width="fill_parent"
+		    		android:layout_height="wrap_content"
+		    		android:orientation="horizontal">
+		    		
+		    		<RadioButton android:id="@+id/rbBandWidthNarrow"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="10sp"
+		        		android:text="Narrow" />
+		    		
+		    		<RadioButton android:id="@+id/rbBandWidthMedium"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="10sp"
+		        		android:text="Medium"
+		        		android:checked="true" />
+		    		
+		    		<RadioButton android:id="@+id/rbBandWidthWide"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="10sp"
+		        		android:text="Wide" />
+		    		
+		    		<RadioButton android:id="@+id/rbBandWidthSuperWide"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="10sp"
+		        		android:text="Super" />
+		    		
+		    		<RadioButton android:id="@+id/rbBandWidthFull"
+		        		android:layout_width="wrap_content"
+		        		android:layout_height="wrap_content"
+		        		android:textSize="10sp"
+		        		android:text="Full" />
+		    		    		
+				</RadioGroup>
+		
+		    </LinearLayout>
+		
+		    <LinearLayout
+		        android:id="@+id/llOpusBitrate"
+		        android:layout_width="match_parent"
+		       	android:layout_height="wrap_content"
+		       	android:orientation="horizontal">
+		        
+		        <TextView
+		        	android:id="@+id/tvOpusBitrate"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Bitrate" />
+		        
+				<Spinner
+		            android:id="@+id/spnOpusBitrate"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginRight="5dp"
+		            android:layout_marginStart="5dp"
+		            android:layout_marginEnd="5dp" />
+		
+		    </LinearLayout>
+		
+		    <LinearLayout
+		        android:id="@+id/llOpusGainValue"
+		        android:layout_width="match_parent"
+		       	android:layout_height="wrap_content"
+		       	android:orientation="horizontal">
+		        
+		        <TextView
+		        	android:id="@+id/tvOpusGainControl"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Gain Control (0~32768):" />
+		
+		        <EditText
+		            android:id="@+id/etOpusGainValue"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginStart="5dp"
+		            android:layout_marginRight="5dp"
+		            android:layout_marginEnd="5dp"
+		            android:ems="10"
+		            android:inputType="number"
+		            android:text="0" >
+		
+		        </EditText>
+		
+		    </LinearLayout>
+		    
+		    <LinearLayout 
+		        android:id="@+id/llOpusComplexity"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		        
+		        <TextView
+		        	android:id="@+id/tvOpusComplexity"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Complexity (0~9):" />
+		
+		        <EditText
+		            android:id="@+id/etOpusComplexity"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginStart="5dp"
+		            android:layout_marginRight="5dp"
+		            android:layout_marginEnd="5dp"
+		            android:ems="10"
+		            android:inputType="number"
+		            android:maxLength="1"
+		            android:text="0" >
+		    		
+		    	</EditText>
+		    	
+		    </LinearLayout>
+            
+		    <LinearLayout 
+		        android:id="@+id/llOpusControl"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		        
+			    <CheckBox 
+			        android:id="@+id/cbOpusEnableDTX"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Enable DTX" />
+			    
+		    </LinearLayout>
+		   	
+		    <TextView 
+		        android:id="@+id/tvOpusPacketLostControl"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:text="Opus Packet Lost Control"
+		        android:textColor="@color/color_blue" >
+		        
+		    </TextView>
+		    
+		    <LinearLayout 
+		        android:id="@+id/llOpusPacketLostControl1"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+			
+		        <CheckBox
+			        android:id="@+id/cbOpusInbandFEC"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Inband FEC" />
+		        
+		        <CheckBox
+		            android:id="@+id/cbOpusEnablePLC"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Enable PLC" />
+		            
+			</LinearLayout>
+			
+		    <LinearLayout 
+		        android:id="@+id/llOpusPacketLostControl2"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+			
+		        <CheckBox
+			        android:id="@+id/cbOpusAddSilent"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Add Silent" />
+		            
+			</LinearLayout>
+		    
+		    <LinearLayout
+		        android:id="@+id/llOpusPacketLostControl3"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		
+		    	<TextView
+		        	android:id="@+id/tvOpusPacketLostPerc"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="Packet Lost Percentage:" />
+		
+		    	<Spinner
+		        	android:id="@+id/spnOpusPacketLostPerc"
+		        	android:layout_width="match_parent"
+		        	android:layout_height="wrap_content" />
+		    	
+		    </LinearLayout>
+		    
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/llNetworkSetting"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/llOpusSetting"
+		    android:orientation="vertical" >
+            
+            <TextView 
+                android:id="@+id/tvNetworkSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+	        	android:textColor="@color/color_blue"
+	        	android:text="Network Setting:"
+                 />
+            
+            <TextView
+		        android:id="@+id/tvTargetIPAddress"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Target IP Address:" />
+		
+		    <EditText
+		        android:id="@+id/etTargetIPText"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:text="192.168.1.225"
+		        android:inputType="none" />
+		
+		    <TextView
+		        android:id="@+id/tvUDPListenPort"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="UDP Listen Port:" />
+		    
+		    <EditText
+		        android:id="@+id/etUDPListenPort"
+		        android:layout_width="80dp"
+		        android:layout_height="wrap_content"
+		        android:ems="10"
+		        android:inputType="numberDecimal"
+		        android:text="1024" />
+		
+		    <TextView
+		        android:id="@+id/tvUDPTargetPort"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Target UDP Port" />
+		    
+		    <EditText
+		        android:id="@+id/etUDPTargetPort"
+		        android:layout_width="80dp"
+		        android:layout_height="wrap_content"
+		        android:ems="10"
+		        android:inputType="numberDecimal"
+		        android:text="1024" />
+    
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/llVersion"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/llNetworkSetting"
+		    android:orientation="vertical" >
+		    
+            <TextView
+		        android:id="@+id/tvVersion"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="version:" />
+            
+        </LinearLayout>
+        
+	</RelativeLayout>
+
+</ScrollView>

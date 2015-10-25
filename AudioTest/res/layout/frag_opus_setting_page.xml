@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tvOpusSettings"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:text="Opus Settings"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/llOpusApplication"
+        android:layout_width="match_parent"
+       	android:layout_height="wrap_content"
+       	android:layout_alignStart="@+id/tvOpusSettings"
+       	android:layout_alignLeft="@+id/tvOpusSettings"
+       	android:layout_below="@+id/tvOpusSettings"
+       	android:layout_marginTop="20dp"
+       	android:orientation="vertical">
+        
+        <TextView
+        	android:id="@+id/tvOpusApplication"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="Application" />
+        
+        <RadioGroup
+            android:id="@+id/rgOpusApplication"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="horizontal">
+
+    		<RadioButton android:id="@+id/rbAppVoIP"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:textSize="12sp"
+        		android:text="VoIP" />
+    		
+    		<RadioButton android:id="@+id/rbAppAudio"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:textSize="12sp"
+        		android:checked="true"
+        		android:text="Audio" />
+    		
+    		<RadioButton android:id="@+id/rbAppRistrictLowDelay"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:textSize="12sp"
+        		android:text="RestrictLowDelay" />
+    		
+		</RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llOpusSignal"
+        android:layout_width="match_parent"
+       	android:layout_height="wrap_content"
+       	android:layout_alignStart="@+id/llOpusApplication"
+       	android:layout_alignLeft="@+id/llOpusApplication"
+       	android:layout_below="@+id/llOpusApplication"
+       	android:layout_marginTop="10dp"
+       	android:orientation="vertical">
+        
+        <TextView
+        	android:id="@+id/tvOpusSignal"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="Signal" />
+        
+        <RadioGroup
+            android:id="@+id/rgOpusSignal"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="horizontal">
+    		
+    		<RadioButton android:id="@+id/rbSignalAuto"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:textSize="12sp"
+        		android:text="Auto" />
+    		
+    		<RadioButton android:id="@+id/rbSignalVoice"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:textSize="12sp"
+        		android:text="Voice"
+        		android:checked="true" />
+    		
+    		<RadioButton android:id="@+id/rbSignalMusic"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:textSize="12sp"
+        		android:text="Music" />
+
+		</RadioGroup>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/llOpusBandWidth"
+        android:layout_width="match_parent"
+       	android:layout_height="wrap_content"
+       	android:layout_alignStart="@+id/llOpusSignal"
+       	android:layout_alignLeft="@+id/llOpusSignal"
+       	android:layout_below="@+id/llOpusSignal"
+       	android:layout_marginTop="10dp"
+       	android:orientation="vertical">
+        
+        <TextView
+        	android:id="@+id/tvOpusBandWidth"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="Bandwidth" />
+        
+        <RadioGroup
+            android:id="@+id/rgOpusBandWidth"
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="horizontal">
+    		
+    		<RadioButton android:id="@+id/rbBandWidthNarrow"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:textSize="10sp"
+        		android:text="Narrow" />
+    		
+    		<RadioButton android:id="@+id/rbBandWidthMedium"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:textSize="10sp"
+        		android:text="Medium"
+        		android:checked="true" />
+    		
+    		<RadioButton android:id="@+id/rbBandWidthWide"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:textSize="10sp"
+        		android:text="Wide" />
+    		
+    		<RadioButton android:id="@+id/rbBandWidthSuperWide"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:textSize="10sp"
+        		android:text="Super" />
+    		
+    		<RadioButton android:id="@+id/rbBandWidthFull"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:textSize="10sp"
+        		android:text="Full" />
+    		    		
+		</RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llOpusBitrate"
+        android:layout_width="match_parent"
+       	android:layout_height="wrap_content"
+       	android:layout_alignStart="@+id/tvOpusSettings"
+       	android:layout_alignLeft="@+id/tvOpusSettings"
+       	android:layout_below="@+id/llOpusBandWidth"
+       	android:layout_marginTop="10dp"
+       	android:orientation="horizontal">
+        
+        <TextView
+        	android:id="@+id/tvOpusBitrate"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="Bitrate" />
+        
+		<Spinner
+            android:id="@+id/spnOpusBitrate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llOpusGainValue"
+        android:layout_width="match_parent"
+       	android:layout_height="wrap_content"
+       	android:layout_alignStart="@+id/tvOpusSettings"
+       	android:layout_alignLeft="@+id/tvOpusSettings"
+       	android:layout_below="@+id/llOpusBitrate"
+       	android:layout_marginTop="10dp"
+       	android:orientation="horizontal">
+        
+        <TextView
+        	android:id="@+id/tvOpusGainControl"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="Gain Control (0~32768):" />
+
+        <EditText
+            android:id="@+id/etOpusGainValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="0" >
+
+        </EditText>
+
+    </LinearLayout>
+    
+</RelativeLayout>

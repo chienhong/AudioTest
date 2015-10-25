@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tvAudioBasicSetting"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:text="Audio Demo Settings:"
+        android:textSize="18sp" />
+
+    <LinearLayout 
+        android:id="@+id/llAudioTestMode"
+        android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/tvAudioBasicSetting"
+	    android:layout_marginLeft="20dp"
+	    android:orientation="vertical" >
+	    	
+	  	<TextView
+	        android:id="@+id/tvAudioTestMode"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="AudioTestMode" />
+	    	
+		<RadioGroup
+	        android:id="@+id/rgAudioTestMode"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	android:orientation="horizontal">
+	    		
+	    	<RadioButton android:id="@+id/rbLocalLoop"
+	        	android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:textSize="12sp"
+	        	android:text="LocalLoop" />
+	    		
+	    	<RadioButton android:id="@+id/rbLocalUDP"
+	        	android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:textSize="12sp"
+	        	android:text="UDP"
+	        	android:checked="true" />
+	    		
+		</RadioGroup>
+			
+	</LinearLayout>
+		
+    <LinearLayout 
+	    android:id="@+id/llAudioControl"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/llAudioTestMode"
+	    android:layout_marginLeft="20dp"
+	    android:orientation="horizontal" >
+   	    
+   	    <Button
+	        android:id="@+id/btnAudioStart"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:text="Audio Start" />
+	
+	    <Button
+	        android:id="@+id/btnAudioStop"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:text="Audio Stop" />
+	</LinearLayout>
+	
+    <LinearLayout 
+	    android:id="@+id/llAudioSource"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/llAudioControl"
+	    android:layout_marginLeft="20dp"
+	    android:orientation="vertical" >
+   	    
+        <TextView
+	        	android:id="@+id/tvAudioSource"
+	        	android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:textSize="16sp"
+	        	android:textColor="@color/color_blue"
+	        	android:text="Audio Source" />
+                    
+				<CheckBox
+		        	android:id="@+id/cbMP3Source"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="MP3 Music" />
+		
+	</LinearLayout>
+	
+    <LinearLayout
+            android:id="@+id/llAudioControlSettings"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_below="@+id/llAudioSource"
+        	android:layout_marginLeft="20dp"
+        	android:orientation="vertical" >
+            
+            <TextView
+	        	android:id="@+id/tvAudioControl"
+	        	android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:textSize="16sp"
+	        	android:textColor="@color/color_blue"
+	        	android:text="Audio Control" />
+            
+            <LinearLayout 
+                android:id="@+id/llAudioControl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp" >
+                
+                <CheckBox
+	        		android:id="@+id/cbEnableAEC"
+	        		android:layout_width="wrap_content"
+	        		android:layout_height="wrap_content"
+	        		android:text="Enable AEC" />
+
+    		    <CheckBox
+	        		android:id="@+id/cbEnableVAD"
+	        		android:layout_width="wrap_content"
+	        		android:layout_height="wrap_content"
+	        		android:text="Enable VAD" />
+    		    
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:id="@+id/llAudioControl2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp" >
+                
+                <CheckBox
+	        		android:id="@+id/cbEnableNS"
+	        		android:layout_width="wrap_content"
+	        		android:layout_height="wrap_content"
+	        		android:text="Enable NS" />
+
+    		    <CheckBox
+	        		android:id="@+id/cbEnableAGC"
+	        		android:layout_width="wrap_content"
+	        		android:layout_height="wrap_content"
+	        		android:text="Enable AGC" />
+    		    
+            </LinearLayout>
+            
+        </LinearLayout>
+	    
+    
+    <LinearLayout 
+        android:id="@+id/llNetworkSetting"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/llAudioControlSettings"
+		android:layout_marginLeft="20dp"
+		android:orientation="vertical" >
+            
+        <TextView 
+            android:id="@+id/tvNetworkSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+	        android:textColor="@color/color_blue"
+	        android:text="Network Setting:"
+            />
+            
+        <TextView
+		    android:id="@+id/tvTargetIPAddress"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Target IP Address:" />
+		
+		<EditText
+		    android:id="@+id/etTargetIPText"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="192.168.1.225"
+		    android:inputType="none" />
+		
+		<TextView
+		    android:id="@+id/tvUDPListenPort"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="UDP Listen Port:" />
+		    
+		<EditText
+		    android:id="@+id/etUDPListenPort"
+		    android:layout_width="80dp"
+		    android:layout_height="wrap_content"
+		    android:ems="10"
+		    android:inputType="numberDecimal"
+		    android:text="1024" />
+		
+		<TextView
+		    android:id="@+id/tvUDPTargetPort"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Target UDP Port" />
+		    
+		<EditText
+		    android:id="@+id/etUDPTargetPort"
+		    android:layout_width="80dp"
+		    android:layout_height="wrap_content"
+		    android:ems="10"
+		    android:inputType="numberDecimal"
+		    android:text="1024" />
+    
+    </LinearLayout>
+    
+</RelativeLayout>
+</ScrollView>

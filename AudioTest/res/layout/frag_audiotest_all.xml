@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout 
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content" >
+
+	    <LinearLayout 
+	        android:id="@+id/llAudioTestMode"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentStart="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginLeft="15dp"
+	        android:layout_marginStart="15dp"
+	        android:layout_marginTop="10dp"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+	    	
+	    	<TextView
+	        	android:id="@+id/tvAudioTestMode"
+	        	android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="AudioTestMode" />
+	    	
+			<RadioGroup
+	            android:id="@+id/rgAudioTestMode"
+	    		android:layout_width="fill_parent"
+	    		android:layout_height="wrap_content"
+	    		android:orientation="horizontal">
+	    		
+	    		<RadioButton android:id="@+id/rbLocalLoop"
+	        		android:layout_width="wrap_content"
+	        		android:layout_height="wrap_content"
+	        		android:textSize="12sp"
+	        		android:text="LocalLoop" />
+	    		
+	    		<RadioButton android:id="@+id/rbLocalUDP"
+	        		android:layout_width="wrap_content"
+	        		android:layout_height="wrap_content"
+	        		android:textSize="12sp"
+	        		android:text="UDP"
+	        		android:checked="true" />
+	
+			</RadioGroup>
+			
+	    </LinearLayout>
+	    
+	    <Button
+	        android:id="@+id/btnAudioStart"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/llAudioTestMode"
+	        android:layout_below="@+id/llAudioTestMode"
+	        android:layout_marginTop="10dp"
+	        android:text="Audio Start" />
+	
+	    <Button
+	        android:id="@+id/btnAudioStop"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/btnAudioStart"
+	        android:layout_below="@+id/btnAudioStart"
+	        android:layout_marginTop="10dp"
+	        android:text="Audio Stop" />
+	
+	    <CheckBox
+	        android:id="@+id/cbEnableAEC"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/llAudioTestMode"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentEnd="true"
+	        android:layout_marginRight="10dp"
+	        android:text="Enable AEC" />
+	
+	    <CheckBox
+	        android:id="@+id/cbEnableDrop"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentEnd="true"
+			android:layout_below="@+id/cbEnableAEC"
+			android:layout_marginRight="10dp"
+	        android:text="Enable Drop"
+	        android:layout_marginTop="10dp" />
+	
+	    <CheckBox
+	        android:id="@+id/cbDynPlayRate"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentEnd="true"
+	        android:layout_below="@+id/cbEnableDrop"
+	        android:text="Dynamic Rate"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginRight="10dp" />
+	
+	    <LinearLayout
+	        android:id="@+id/llRecvAudioQueueSize" 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentEnd="true"
+	        android:layout_below="@+id/btnStrongRate"
+	        android:layout_marginRight="5dp"
+	        android:layout_marginEnd="5dp"
+	        android:layout_marginBottom="5dp"
+	        android:orientation="horizontal" >
+	
+	        <TextView
+	        	android:id="@+id/tvRecvAudioQueueSize"
+	        	android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="Recv Audio Queue Size:" />
+	        
+	        <TextView
+	        	android:id="@+id/tvRecvQueueValue"
+	        	android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:text="0" />
+	                
+	        
+	    </LinearLayout>
+	
+	    <TextView
+	        android:id="@+id/tvUDPDropRate"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/cbUDPListen"
+	        android:layout_alignLeft="@+id/cbUDPListen"
+	        android:layout_alignStart="@+id/cbUDPListen"
+	        android:text="UDP Drop Rate:" />
+	
+	    <EditText
+	        android:id="@+id/etUDPDropRate"
+	        android:layout_width="50dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/tvUDPDropRate"
+	        android:layout_toRightOf="@+id/tvUDPDropRate"
+	        android:layout_toEndOf="@+id/tvUDPDropRate"
+	        android:ems="10"
+	        android:inputType="number"
+	        android:text="0" >
+	
+	    </EditText>
+	
+	    <TextView
+	        android:id="@+id/tvUDPSendDelayTime"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/tvUDPDropRate"
+	        android:layout_alignLeft="@+id/tvUDPDropRate"
+	        android:layout_alignStart="@+id/tvUDPDropRate"
+	        android:layout_marginLeft="3dp"
+	        android:layout_marginStart="3dp"
+	        android:text="UDP Send Delay Time (ms):" />
+	
+	    <EditText
+	        android:id="@+id/etUDPSendDelayTime"
+	        android:layout_width="50dp"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/tvUDPSendDelayTime"
+	        android:layout_toRightOf="@+id/tvUDPSendDelayTime"
+	        android:layout_toEndOf="@+id/tvUDPSendDelayTime"
+	        android:ems="10"
+	        android:inputType="number"
+	        android:layout_marginLeft="3dp"
+	        android:layout_marginStart="3dp"
+	        android:text="0" >
+	
+	    </EditText>
+	
+	    <Button
+	        android:id="@+id/btnStrongRate"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignRight="@+id/cbDynPlayRate"
+	        android:layout_alignEnd="@+id/cbDynPlayRate"
+	        android:layout_below="@+id/cbDynPlayRate"
+	        android:text="強波" />
+
+	    <CheckBox
+	        android:id="@+id/cbUDPListen"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/btnAudioStop"
+	        android:layout_alignStart="@+id/btnAudioStop"
+	        android:layout_below="@+id/btnAudioStop"
+	        android:text="UDP Listen" />
+    
+	</RelativeLayout>
+    
+
+</ScrollView>

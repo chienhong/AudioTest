@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AudioTest</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    
+	<string-array name="nvg_array">
+        <item>主畫面</item>
+        <item>進階</item>
+        <!--  
+        <item>語音基本設定</item>
+        <item>Opus設定</item>
+        <item>網路設定</item>
+        <item>所有設定</item>
+        <item>其他設定</item>
+        -->
+    </string-array>
+
+	<string name="audio_control_send_delayrate">Audio Send Delay Rate (%):</string>
+	<string name="audio_control_send_delaytime">Audio Send Delay Time (ms):</string>
+	<string name="audio_control_recv_delayrate">Audio Recv Delay Rate (%):</string>
+	<string name="audio_control_recv_delaytime">Audio Recv Delay Time (ms):</string>
+	
+</resources>

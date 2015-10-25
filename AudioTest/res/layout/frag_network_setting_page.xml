@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tvTargetIPAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:text="Target IP Address:" />
+
+    <EditText
+        android:id="@+id/etTargetIPText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvTargetIPAddress"
+        android:layout_toRightOf="@+id/tvTargetIPAddress"
+        android:layout_toEndOf="@+id/tvTargetIPAddress"
+        android:layout_marginLeft="3dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginEnd="3dp"
+        android:text="192.168.1.225"
+        android:inputType="none" />
+
+    <TextView
+        android:id="@+id/tvUDPListenPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvTargetIPAddress"
+        android:layout_alignStart="@+id/tvTargetIPAddress"
+        android:layout_below="@+id/tvTargetIPAddress"
+        android:layout_marginTop="15dp"
+        android:text="UDP Listen Port:" />
+    
+    <EditText
+        android:id="@+id/etUDPListenPort"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvUDPListenPort"
+        android:layout_alignBottom="@+id/tvUDPListenPort"
+        android:layout_toRightOf="@+id/tvUDPListenPort"
+        android:layout_toEndOf="@+id/tvUDPListenPort"
+        android:layout_marginLeft="3dp"
+        android:layout_marginStart="3dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="1024" />
+
+    <TextView
+        android:id="@+id/tvUDPTargetPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvUDPListenPort"
+        android:layout_alignStart="@+id/tvUDPListenPort"
+        android:layout_below="@+id/etUDPListenPort"
+        android:layout_marginTop="15dp"
+        android:text="Target UDP Port" />
+    
+    <EditText
+        android:id="@+id/etUDPTargetPort"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvUDPTargetPort"
+        android:layout_alignBottom="@+id/tvUDPTargetPort"
+        android:layout_toRightOf="@+id/tvUDPTargetPort"
+        android:layout_toEndOf="@+id/tvUDPTargetPort"
+        android:layout_marginLeft="3dp"
+        android:layout_marginStart="3dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="1024" />
+    
+</RelativeLayout>

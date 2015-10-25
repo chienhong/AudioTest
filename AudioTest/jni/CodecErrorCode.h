@@ -1,0 +1,8 @@
+
+// Error code list of Celt
+#define ERROR_CREATE_DECODER_FAILED 	-1
+#define ERROR_CREATE_ENCODER_FAILED 	-2
+#define ERROR_ENCODE_DATA				-3
+#define ERROR_DECODE_DATA				-4
+#define ERROR_ENCODER_NOT_EXIST			-5
+#define ERROR_DECODER_NOT_EXIST			-6

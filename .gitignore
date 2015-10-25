@@ -1,0 +1,9 @@
+
+appcompat_v7/bin/*
+appcompat_v7/gen/*
+
+AudioTest/obj/*
+AudioTest/bin/*
+AudioTest/gen/*
+
+
