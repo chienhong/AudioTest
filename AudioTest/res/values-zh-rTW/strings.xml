@@ -12,7 +12,6 @@
     
 	<string-array name="nvg_array">
         <item>主畫面</item>
-        <item>進階</item>
         <!--  
         <item>語音基本設定</item>
         <item>Opus設定</item>

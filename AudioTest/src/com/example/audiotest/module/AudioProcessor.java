@@ -152,7 +152,7 @@ public class AudioProcessor {
 	private short[] mDecodeOpusEmptyBuffer = null;
 
 	// Amplitude counter for Recorder/Encoder Side
-	private short[] mRecordedData = null;
+	private short[] mRecordedDataBuffer = null;
 	private short[] mRecordedDataMono = null;
 	private ShortBuffer mRecordDataBuffer = null;
 //	private int mEncAmplitudeAverage = 0;
@@ -1499,7 +1499,7 @@ public class AudioProcessor {
 		if (!initializeRecord())
 			return;
 		//Log.d(LOG_TAG, "init RecordedData with size: " + mAudioBufferSize);
-		mRecordedData = new short[mEncAudioBufferSize];
+		mRecordedDataBuffer = new short[mEncAudioBufferSize];
 		mRecordedDataMono = new short[mEncAudioBufferSize/2];
 		mAecmOutputData = new short[mEncAudioBufferSize];
 		mNSOutputData = new short[mEncAudioBufferSize];
@@ -2271,7 +2271,7 @@ public class AudioProcessor {
 
 			int readSize = 0;
 			if (null != mAudioRecorder) {
-				readSize = mAudioRecorder.read(mRecordedData, 0, mEncAudioBufferSize);
+				readSize = mAudioRecorder.read(mRecordedDataBuffer, 0, mEncAudioBufferSize);
 			}
 			
 			//Log.i("GetAudioData", String.format("mAudioBufferSize=%d, readSize=%d", mEncAudioBufferSize, readSize));
@@ -2287,7 +2287,7 @@ public class AudioProcessor {
 					}
 				}
 				else {
-					data = processAudioRecordData(mRecordedData);
+					data = processAudioRecordData(mRecordedDataBuffer);
 					
 					if (data != null){
 						return data;
@@ -2316,12 +2316,12 @@ public class AudioProcessor {
 		int remainSize = mEncAudioBufferSize - mRecordDataBuffer.position();
 		int index = 0;
 		if (remainSize < readSize) {
-			mRecordDataBuffer.put(mRecordedData, 0, remainSize);
+			mRecordDataBuffer.put(mRecordedDataBuffer, 0, remainSize);
 			restSize = readSize - remainSize;
 			index += remainSize;
 		}
 		else {
-			mRecordDataBuffer.put(mRecordedData, 0, readSize);
+			mRecordDataBuffer.put(mRecordedDataBuffer, 0, readSize);
 			remainSize = 0;
 			index += readSize;
 		}
@@ -2333,7 +2333,7 @@ public class AudioProcessor {
 			mRecordDataBuffer.clear();
 			
 			while(restSize >= mEncAudioBufferSize){
-				mRecordDataBuffer.put(mRecordedData, index, mEncAudioBufferSize);
+				mRecordDataBuffer.put(mRecordedDataBuffer, index, mEncAudioBufferSize);
 				index += mEncAudioBufferSize;
 				short[] tempData2 = mRecordDataBuffer.duplicate().array();
 				data = processAudioRecordData(tempData2);
@@ -2344,7 +2344,7 @@ public class AudioProcessor {
 			}
 			
 			if (restSize > 0) {
-				mRecordDataBuffer.put(mRecordedData, index, restSize);
+				mRecordDataBuffer.put(mRecordedDataBuffer, index, restSize);
 			}
 
 			if (data != null){

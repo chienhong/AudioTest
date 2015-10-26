@@ -77,36 +77,12 @@
 	        android:layout_marginTop="10dp"
 	        android:text="Audio Stop" />
 	</LinearLayout>
-	
-    <LinearLayout 
-	    android:id="@+id/llAudioSource"
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:layout_below="@+id/llAudioControl"
-	    android:layout_marginLeft="20dp"
-	    android:orientation="vertical" >
-   	    
-        <TextView
-	        	android:id="@+id/tvAudioSource"
-	        	android:layout_width="wrap_content"
-	        	android:layout_height="wrap_content"
-	        	android:textSize="16sp"
-	        	android:textColor="@color/color_blue"
-	        	android:text="Audio Source" />
-                    
-				<CheckBox
-		        	android:id="@+id/cbMP3Source"
-		        	android:layout_width="wrap_content"
-		        	android:layout_height="wrap_content"
-		        	android:text="MP3 Music" />
 		
-	</LinearLayout>
-	
     <LinearLayout
             android:id="@+id/llAudioControlSettings"
         	android:layout_width="fill_parent"
         	android:layout_height="wrap_content"
-        	android:layout_below="@+id/llAudioSource"
+        	android:layout_below="@+id/llAudioControl"
         	android:layout_marginLeft="20dp"
         	android:orientation="vertical" >
             

@@ -12,7 +12,6 @@
     
 	<string-array name="nvg_array">
         <item>Main</item>
-        <item>Advance</item>
         <!--
         <item>Audio Basic Settings</item>
         <item>Opus Settings</item>

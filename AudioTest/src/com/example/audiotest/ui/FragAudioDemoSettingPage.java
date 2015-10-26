@@ -434,18 +434,6 @@ public class FragAudioDemoSettingPage extends Fragment implements IUDPReceiveInt
     		btnAudioStop.setEnabled(false);
     	}
     	
-    	cbMP3Source = (CheckBox) rootView.findViewById(R.id.cbMP3Source);
-    	cbMP3Source.setOnCheckedChangeListener(new OnCheckedChangeListener(){
-
-			@Override
-			public void onCheckedChanged(CompoundButton buttonView,
-					boolean isChecked) {
-				// TODO Auto-generated method stub
-				mAudioConfig.setEnableMP3(isChecked);
-			}
-    		
-    	});
-    	cbMP3Source.setChecked(mAudioConfig.getEnableMP3());
     }
 
     public void startUDPReceiver(){
